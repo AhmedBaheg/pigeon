@@ -25,6 +25,7 @@ class RestOfScreen extends StatelessWidget {
           ActiveAuction(),
           SizedBox(height: 16),
           NewAtMarket(),
+          SizedBox(height: 16),
         ],
       ),
     );

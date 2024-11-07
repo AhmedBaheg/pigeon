@@ -27,7 +27,7 @@ class UpcomingRaceCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: 45,
+                height: MediaQuery.of(context).size.height * 0.047,
                 width: 4,
                 decoration: BoxDecoration(
                   color: const Color(0xffFDEEE3),

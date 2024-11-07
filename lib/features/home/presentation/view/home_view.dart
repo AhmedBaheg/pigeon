@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pigeon/features/home/presentation/view/widgets/home_view_body.dart';
+import 'package:pigeon/features/races/presentation/view/races_view.dart';
 
 import 'widgets/custom_navigation_bottom.dart';
 
@@ -17,7 +18,7 @@ class _HomeViewState extends State<HomeView> {
     const HomeViewBody(),
     const HomeViewBody(),
     const HomeViewBody(),
-    const HomeViewBody(),
+    const RacesView(),
     const HomeViewBody(),
   ];
 

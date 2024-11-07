@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:pigeon/core/utils/app_router.dart';
 
 import 'category_card.dart';
 
@@ -14,7 +16,9 @@ class Categories extends StatelessWidget {
         Row(
           children: [
             CategoryCard(
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kRacesView);
+              },
               image: 'asset/images/race.jpeg',
               title: 'Races',
               description: 'Join races and \nearn money',
