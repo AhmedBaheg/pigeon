@@ -6,7 +6,7 @@ import 'categories.dart';
 import 'custom_app_bar.dart';
 import 'home_search_field.dart';
 import 'rest_of_screen.dart';
-import 'upcoming_race_card.dart';
+import 'category_race_card.dart';
 import 'header_title_with_see_all.dart';
 
 class HomeViewBody extends StatelessWidget {

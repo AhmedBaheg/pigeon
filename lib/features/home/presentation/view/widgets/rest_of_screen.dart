@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pigeon/features/races/data/model/category_race_model.dart';
 
 import 'active_auction.dart';
 import 'categories.dart';
 import 'new_at_market.dart';
-import 'upcoming_race.dart';
+import 'category_race.dart';
 
 class RestOfScreen extends StatelessWidget {
   const RestOfScreen({
@@ -16,16 +17,18 @@ class RestOfScreen extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       width: double.infinity,
       color: const Color(0xffF5F5F8),
-      child: const Column(
+      child: Column(
         children: [
-          Categories(),
-          SizedBox(height: 16),
-          UpcomingRace(),
-          SizedBox(height: 16),
-          ActiveAuction(),
-          SizedBox(height: 16),
-          NewAtMarket(),
-          SizedBox(height: 16),
+          const Categories(),
+          const SizedBox(height: 16),
+          CategoryRace(
+            model: categoryRaceList[0],
+          ),
+          const SizedBox(height: 16),
+          const ActiveAuction(),
+          const SizedBox(height: 16),
+          const NewAtMarket(),
+          const SizedBox(height: 16),
         ],
       ),
     );
