@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pigeon/core/utils/app_colors.dart';
 import 'package:pigeon/core/utils/styles.dart';
 
 class HeaderTitleWithSeeAll extends StatelessWidget {
@@ -23,7 +24,7 @@ class HeaderTitleWithSeeAll extends StatelessWidget {
         TextButton(
           onPressed: onPressed,
           style: TextButton.styleFrom(
-            foregroundColor: const Color(0xff2F383C),
+            foregroundColor: AppColors.darkGray,
           ),
           child: const Text(
             'See all',

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pigeon/core/utils/app_colors.dart';
 import 'package:pigeon/core/utils/styles.dart';
 import 'package:pigeon/core/widgets/custom_btn_app.dart';
 import 'package:pigeon/core/widgets/custom_out_line_btn.dart';
@@ -18,7 +19,7 @@ class NewAtMarketCard extends StatelessWidget {
             padding: const EdgeInsets.all(4),
             width: MediaQuery.of(context).size.width * .45,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: AppColors.white,
               borderRadius: BorderRadius.circular(8),
             ),
             child: Column(
@@ -58,8 +59,7 @@ class NewAtMarketCard extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   '500 EGP ',
-                  style: Styles.textStyle14
-                      .copyWith(color: const Color(0xff55CC4B)),
+                  style: Styles.textStyle14.copyWith(color: AppColors.green),
                 ),
                 const SizedBox(height: 6),
                 SizedBox(
@@ -69,7 +69,7 @@ class NewAtMarketCard extends StatelessWidget {
                       Expanded(
                         child: CustomBtnApp(
                           onPressed: () {},
-                          backgroundColor: const Color(0xff2F383C),
+                          backgroundColor: AppColors.darkGray,
                           text: 'Buy now',
                         ),
                       ),

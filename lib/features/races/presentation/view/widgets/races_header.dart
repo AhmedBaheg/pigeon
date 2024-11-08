@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pigeon/core/utils/app_colors.dart';
 import 'package:pigeon/core/utils/styles.dart';
 
 class RacesHeader extends StatelessWidget {
@@ -15,7 +16,7 @@ class RacesHeader extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.06,
           width: 4,
           decoration: BoxDecoration(
-            color: const Color(0xff55CC4B),
+            color: AppColors.green,
             borderRadius: BorderRadius.circular(2),
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pigeon/core/utils/app_colors.dart';
 import 'package:pigeon/core/utils/styles.dart';
 
 class CustomNavigationBottom extends StatelessWidget {
@@ -31,12 +32,12 @@ class CustomNavigationBottom extends StatelessWidget {
         child: BottomNavigationBar(
           onTap: onTap,
           currentIndex: currentIndex,
-          backgroundColor: Colors.white,
-          selectedItemColor: const Color(0xff2F383C),
+          backgroundColor: AppColors.white,
+          selectedItemColor: AppColors.darkGray,
           selectedLabelStyle: Styles.textStyle14,
           unselectedLabelStyle: Styles.textStyle14,
           showUnselectedLabels: true,
-          unselectedItemColor: const Color(0xffBFBEC0),
+          unselectedItemColor: AppColors.lightGray,
           items: getItems(),
         ),
       ),
@@ -49,9 +50,7 @@ class CustomNavigationBottom extends StatelessWidget {
         icon: SvgPicture.asset(
           'asset/icons/home.svg',
           colorFilter: ColorFilter.mode(
-              currentIndex == 0
-                  ? const Color(0xff2F383C)
-                  : const Color(0xffBFBEC0),
+              currentIndex == 0 ? AppColors.darkGray : AppColors.lightGray,
               BlendMode.srcIn),
         ),
         label: 'Home',
@@ -60,9 +59,7 @@ class CustomNavigationBottom extends StatelessWidget {
           icon: SvgPicture.asset(
             'asset/icons/shopping-cart.svg',
             colorFilter: ColorFilter.mode(
-                currentIndex == 1
-                    ? const Color(0xff2F383C)
-                    : const Color(0xffBFBEC0),
+                currentIndex == 1 ? AppColors.darkGray : AppColors.lightGray,
                 BlendMode.srcIn),
           ),
           label: 'Store'),
@@ -70,9 +67,7 @@ class CustomNavigationBottom extends StatelessWidget {
           icon: SvgPicture.asset(
             'asset/icons/add-circle.svg',
             colorFilter: ColorFilter.mode(
-                currentIndex == 2
-                    ? const Color(0xff2F383C)
-                    : const Color(0xffBFBEC0),
+                currentIndex == 2 ? AppColors.darkGray : AppColors.lightGray,
                 BlendMode.srcIn),
           ),
           label: ''),
@@ -80,9 +75,7 @@ class CustomNavigationBottom extends StatelessWidget {
           icon: SvgPicture.asset(
             'asset/icons/cup.svg',
             colorFilter: ColorFilter.mode(
-                currentIndex == 3
-                    ? const Color(0xff2F383C)
-                    : const Color(0xffBFBEC0),
+                currentIndex == 3 ? AppColors.darkGray : AppColors.lightGray,
                 BlendMode.srcIn),
           ),
           label: 'Races'),
@@ -90,9 +83,7 @@ class CustomNavigationBottom extends StatelessWidget {
           icon: SvgPicture.asset(
             'asset/icons/profile.svg',
             colorFilter: ColorFilter.mode(
-                currentIndex == 4
-                    ? const Color(0xff2F383C)
-                    : const Color(0xffBFBEC0),
+                currentIndex == 4 ? AppColors.darkGray : AppColors.lightGray,
                 BlendMode.srcIn),
           ),
           label: 'Profile'),

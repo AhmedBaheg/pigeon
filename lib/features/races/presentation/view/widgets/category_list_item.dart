@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pigeon/core/utils/app_colors.dart';
 import 'package:pigeon/core/utils/styles.dart';
 import 'package:pigeon/features/constant.dart';
 
@@ -23,15 +24,13 @@ class CategoryListItem extends StatelessWidget {
         margin: const EdgeInsets.only(right: 8),
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
         decoration: BoxDecoration(
-          color: selectIndex == index
-              ? const Color(0xff2F383C)
-              : Colors.transparent,
+          color: selectIndex == index ? AppColors.darkGray : Colors.transparent,
           borderRadius: BorderRadius.circular(kBorderRadius),
           border: selectIndex == index
               ? null
               : Border.all(
                   width: 1,
-                  color: const Color(0xff2F383C),
+                  color: AppColors.darkGray,
                 ),
         ),
         child: Center(
@@ -39,7 +38,7 @@ class CategoryListItem extends StatelessWidget {
             text,
             style: Styles.textStyle14.copyWith(
               color:
-                  selectIndex == index ? Colors.white : const Color(0xff2F383C),
+                  selectIndex == index ? AppColors.white : AppColors.darkGray,
             ),
           ),
         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
+import 'package:pigeon/core/utils/app_colors.dart';
 import 'package:pigeon/core/utils/styles.dart';
 import 'package:pigeon/features/races/data/model/category_race_model.dart';
 
@@ -26,7 +27,7 @@ class CategoryRaceCardBody extends StatelessWidget {
                 Text(
                   'From',
                   style: Styles.textStyle14.copyWith(
-                    color: const Color(0xffBFBEC0),
+                    color: AppColors.lightGray,
                   ),
                 ),
                 Text(model.from, style: Styles.textStyle14),
@@ -39,7 +40,7 @@ class CategoryRaceCardBody extends StatelessWidget {
                 'asset/icons/next.svg',
                 height: 12,
                 colorFilter:
-                    const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+                    const ColorFilter.mode(AppColors.black, BlendMode.srcIn),
               ),
             ),
             Column(
@@ -48,7 +49,7 @@ class CategoryRaceCardBody extends StatelessWidget {
                 Text(
                   'To',
                   style: Styles.textStyle14.copyWith(
-                    color: const Color(0xffBFBEC0),
+                    color: AppColors.lightGray,
                   ),
                 ),
                 Text(model.to, style: Styles.textStyle14),
@@ -83,7 +84,7 @@ class CategoryRaceCardBody extends StatelessWidget {
             Text(
               'Egypt Club',
               style: Styles.textStyle14.copyWith(
-                color: const Color(0xff7E7E7E),
+                color: AppColors.gray,
               ),
             ),
           ],

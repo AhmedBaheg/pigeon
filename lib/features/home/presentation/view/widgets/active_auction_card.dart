@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pigeon/core/utils/app_colors.dart';
 import 'package:pigeon/core/utils/styles.dart';
 
 class ActiveAuctionCard extends StatelessWidget {
@@ -14,7 +15,7 @@ class ActiveAuctionCard extends StatelessWidget {
           padding: const EdgeInsets.all(12),
           width: MediaQuery.of(context).size.width * 0.6,
           decoration: const BoxDecoration(
-            color: Colors.white,
+            color: AppColors.white,
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(8), topRight: Radius.circular(8)),
           ),
@@ -49,7 +50,7 @@ class ActiveAuctionCard extends StatelessWidget {
                           Text(
                             '5000 EGP',
                             style: Styles.textStyle12
-                                .copyWith(color: const Color(0xff55CC4B)),
+                                .copyWith(color: AppColors.green),
                           ),
                         ],
                       ),
@@ -70,12 +71,13 @@ class ActiveAuctionCard extends StatelessWidget {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                     decoration: BoxDecoration(
-                      color: const Color(0xffD80000),
+                      color: AppColors.red,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
                       'Live',
-                      style: Styles.textStyle12.copyWith(color: Colors.white),
+                      style:
+                          Styles.textStyle12.copyWith(color: AppColors.white),
                     ),
                   )
                 ],
@@ -88,7 +90,7 @@ class ActiveAuctionCard extends StatelessWidget {
                   Text(
                     '2 American rare birds',
                     style: Styles.textStyle14.copyWith(
-                      color: const Color(0xff7E7E7E),
+                      color: AppColors.gray,
                     ),
                   ),
                 ],
@@ -101,7 +103,7 @@ class ActiveAuctionCard extends StatelessWidget {
                   Text(
                     '2 birds',
                     style: Styles.textStyle14.copyWith(
-                      color: const Color(0xff2F383C),
+                      color: AppColors.darkGray,
                     ),
                   ),
                 ],
@@ -133,11 +135,11 @@ class ActiveAuctionCard extends StatelessWidget {
                         left: 20,
                         child: CircleAvatar(
                           radius: 12,
-                          backgroundColor: const Color(0xff2F383C),
+                          backgroundColor: AppColors.darkGray,
                           child: Text(
                             '+28',
                             style: Styles.textStyle10
-                                .copyWith(color: Colors.white),
+                                .copyWith(color: AppColors.white),
                           ),
                         ),
                       ),
@@ -152,7 +154,7 @@ class ActiveAuctionCard extends StatelessWidget {
           width: MediaQuery.of(context).size.width * 0.6,
           height: 35,
           decoration: const BoxDecoration(
-            color: Color(0xffE7E9E8),
+            color: AppColors.softGray,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(8),
               bottomRight: Radius.circular(8),
@@ -164,14 +166,14 @@ class ActiveAuctionCard extends StatelessWidget {
               Text(
                 'Time left',
                 style: Styles.textStyle14.copyWith(
-                  color: const Color(0xff2F383C),
+                  color: AppColors.darkGray,
                 ),
               ),
               const SizedBox(width: 8),
               Text(
                 '1 D 12 H',
                 style: Styles.textStyle14.copyWith(
-                  color: const Color(0xffD80000),
+                  color: AppColors.red,
                 ),
               ),
             ],

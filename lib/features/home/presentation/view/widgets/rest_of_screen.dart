@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pigeon/core/utils/app_colors.dart';
 import 'package:pigeon/features/races/data/model/category_race_model.dart';
 
 import 'active_auction.dart';
@@ -16,7 +17,7 @@ class RestOfScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       width: double.infinity,
-      color: const Color(0xffF5F5F8),
+      color: AppColors.veryLightGray,
       child: Column(
         children: [
           const Categories(),

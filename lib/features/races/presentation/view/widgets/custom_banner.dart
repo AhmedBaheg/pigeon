@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pigeon/core/utils/app_colors.dart';
 import 'package:pigeon/core/utils/styles.dart';
 import 'package:pigeon/core/widgets/custom_out_line_btn.dart';
 
@@ -22,7 +23,7 @@ class CustomBanner extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                color: const Color(0xff2F3C3380),
+                color: AppColors.semiTransparentDark,
                 borderRadius: BorderRadius.circular(8),
               ),
             ),
@@ -35,18 +36,18 @@ class CustomBanner extends StatelessWidget {
                   Text(
                     'Live free result of National Pigeon \nRace of Egypt',
                     maxLines: 2,
-                    style: Styles.textStyle16.copyWith(color: Colors.white),
+                    style: Styles.textStyle16.copyWith(color: AppColors.white),
                   ),
                   const SizedBox(height: 8),
                   CustomOutLineBtn(
                     onPressed: () {},
                     width: MediaQuery.of(context).size.width * 0.2,
                     height: MediaQuery.of(context).size.height * 0.03,
-                    borderColor: Colors.white,
+                    borderColor: AppColors.white,
                     child: Text(
                       'Watch now',
                       style: Styles.textStyle12.copyWith(
-                        color: Colors.white,
+                        color: AppColors.white,
                       ),
                     ),
                   ),

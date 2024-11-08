@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pigeon/core/utils/app_colors.dart';
 import 'package:pigeon/core/utils/styles.dart';
 
 class CategoryCard extends StatelessWidget {
@@ -32,7 +33,7 @@ class CategoryCard extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: const Color(0xff2F3C3399),
+                    color: AppColors.transparency,
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
@@ -47,7 +48,7 @@ class CategoryCard extends StatelessWidget {
                           Text(
                             title,
                             style: Styles.textStyle16
-                                .copyWith(color: Colors.white),
+                                .copyWith(color: AppColors.white),
                           ),
                           const SizedBox(width: 8),
                           SvgPicture.asset('asset/icons/next.svg')
@@ -55,8 +56,8 @@ class CategoryCard extends StatelessWidget {
                       ),
                       Text(description,
                           maxLines: 2,
-                          style:
-                              Styles.textStyle14.copyWith(color: Colors.white)),
+                          style: Styles.textStyle14
+                              .copyWith(color: AppColors.white)),
                     ],
                   ),
                 ),
