@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'app_colors.dart';
+
 abstract class Styles {
   static const textStyle10 =
       TextStyle(fontSize: 10, fontWeight: FontWeight.w500);
@@ -16,8 +18,8 @@ abstract class Styles {
   static const textStyle18 =
       TextStyle(fontSize: 18, fontWeight: FontWeight.w500);
 
-  static const textStyle20 =
-      TextStyle(fontSize: 20, fontWeight: FontWeight.normal);
+  static const textStyle20 = TextStyle(
+      fontSize: 20, fontWeight: FontWeight.w500, color: AppColors.darkGray);
 
   static const textStyle24 =
       TextStyle(fontSize: 24, fontWeight: FontWeight.w500);

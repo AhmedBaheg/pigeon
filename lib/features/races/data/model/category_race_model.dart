@@ -66,3 +66,6 @@ List<CategoryRaceModel> categoryRaceList = [
     isEnded: true,
   ),
 ];
+
+const String description =
+    'Pigeons participating in the Bourges I 2024 race will be basketted on 23/05/2024. Liberation is planned for 25/05/2024.';

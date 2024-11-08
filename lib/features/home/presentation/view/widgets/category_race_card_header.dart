@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pigeon/core/utils/styles.dart';
 import 'package:pigeon/features/races/data/model/category_race_model.dart';
 
+import 'category_race_status.dart';
+
 class CategoryRaceCardHeader extends StatelessWidget {
   const CategoryRaceCardHeader({
     super.key,
@@ -46,17 +48,7 @@ class CategoryRaceCardHeader extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-          decoration: BoxDecoration(
-            color: model.statusColor,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Text(
-            model.statusText,
-            style: Styles.textStyle12.copyWith(color: model.textStatusColor),
-          ),
-        ),
+        CategoryRaceStatus(model: model),
       ],
     );
   }

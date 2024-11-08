@@ -7,8 +7,8 @@ import 'categories.dart';
 import 'new_at_market.dart';
 import 'category_race.dart';
 
-class RestOfScreen extends StatelessWidget {
-  const RestOfScreen({
+class RestOfHomeScreen extends StatelessWidget {
+  const RestOfHomeScreen({
     super.key,
   });
 

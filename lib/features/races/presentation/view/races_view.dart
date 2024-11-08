@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pigeon/core/utils/app_colors.dart';
 
 import 'widgets/races_view_body.dart';
 
@@ -9,7 +10,7 @@ class RacesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffF5F5F8),
+        backgroundColor: AppColors.veryLightGray,
         body: RacesViewBody(),
       ),
     );

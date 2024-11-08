@@ -92,10 +92,10 @@ class CategoryRaceCardBody extends StatelessWidget {
       ],
     );
   }
+}
 
-  String getDateAndTime() {
-    final dateNow = DateTime.now();
-    date = DateFormat('dd MMMM yyyy hh:mm a').format(dateNow);
-    return date;
-  }
+String getDateAndTime() {
+  final dateNow = DateTime.now();
+  String date = DateFormat('dd MMMM yyyy hh:mm a').format(dateNow);
+  return date;
 }

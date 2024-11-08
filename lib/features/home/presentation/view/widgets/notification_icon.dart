@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pigeon/core/utils/app_colors.dart';
 
+import '../../../../../core/widgets/custom_icon_app_bar.dart';
+
 class NotificationIcon extends StatelessWidget {
   const NotificationIcon({
     super.key,
@@ -14,16 +16,12 @@ class NotificationIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {},
-      borderRadius: BorderRadius.circular(10),
+      borderRadius: BorderRadius.circular(8),
       child: Stack(
         clipBehavior: Clip.none,
         children: [
-          Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(width: 1, color: AppColors.white),
-            ),
+          CustomIconAppBar(
+            onTap: () {},
             child: SvgPicture.asset('asset/icons/notification.svg'),
           ),
           if (notify == true)

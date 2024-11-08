@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:pigeon/core/utils/app_router.dart';
 import 'package:pigeon/features/races/data/model/category_race_model.dart';
 
 import 'categories.dart';
@@ -24,7 +26,10 @@ class CategoryRace extends StatelessWidget {
               title: model.headerCategoryTitle,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context)
+                    .push(AppRouter.kRacesDetailsView, extra: model);
+              },
               child: CategoryRaceCard(
                 model: model,
               ),

@@ -12,5 +12,5 @@ class AppColors {
   static const Color black = Color(0xFF000000);
   static const Color white = Color(0xFFFFFFFF);
   static const Color transparency = Color(0xff2f3c3399);
-  static const Color semiTransparentDark = Color(0xff2F3C3380);
+  static const Color semiTransparentDark = Color(0xff2f3c3380);
 }

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'hello_text_with_img.dart';
 import 'notification_icon.dart';
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
+class CustomAppBarHome extends StatelessWidget {
+  const CustomAppBarHome({
     super.key,
   });
 
