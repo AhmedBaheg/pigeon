@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:pigeon/core/utils/app_colors.dart';
 import 'package:pigeon/core/utils/styles.dart';
+import 'package:pigeon/core/widgets/custom_btn_app.dart';
 import 'package:pigeon/features/home/presentation/view/widgets/category_race_card_body.dart';
 import 'package:pigeon/features/races/data/model/category_race_model.dart';
 import 'package:pigeon/features/races_details/presentation/view/widgets/digits_race_details.dart';
 
+import '../../../../../core/widgets/custom_out_line_btn.dart';
 import '../../../../constant.dart';
+import 'basic_race_details.dart';
+import 'btns.dart';
+import 'race_details_location_card.dart';
 
-class RestOfRaceDetailsScreen extends StatelessWidget {
+class RestOfRaceDetailsScreen extends StatefulWidget {
   const RestOfRaceDetailsScreen({
     super.key,
     required this.model,
@@ -16,65 +22,54 @@ class RestOfRaceDetailsScreen extends StatelessWidget {
   final CategoryRaceModel model;
 
   @override
+  State<RestOfRaceDetailsScreen> createState() =>
+      _RestOfRaceDetailsScreenState();
+}
+
+class _RestOfRaceDetailsScreenState extends State<RestOfRaceDetailsScreen> {
+  bool isOpened = false;
+
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.2,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: Image.asset(
-                'asset/images/races_details_img.jpeg',
-                width: double.infinity,
-                fit: BoxFit.cover,
-              ),
-            ),
+          BasicRaceDetails(model: widget.model),
+          const SizedBox(height: 16),
+          RaceDetailsLocationCard(
+            onTap: () {},
+            locationIconPath: '',
+            actionIconPath: 'asset/icons/next.svg',
+            text1: 'Club',
+            text2: 'The Giza club',
           ),
           const SizedBox(height: 16),
-          Text(
-            model.raceTitle,
-            style: Styles.textStyle20,
+          RaceDetailsLocationCard(
+            onTap: () {
+              setState(() {
+                isOpened = !isOpened;
+              });
+            },
+            locationIconPath: 'asset/icons/map (1).svg',
+            actionIconPath:
+                !isOpened ? 'asset/icons/next.svg' : 'asset/icons/down.svg',
+            text1: '150 Kilometers',
+            text2: 'Cairo, Egypt to Qena, Egypt',
+            isOpened: isOpened,
           ),
-          const SizedBox(height: 8),
-          Text(
-            description,
-            style:
-                Styles.textStyle14.copyWith(color: AppColors.gray, height: 1.7),
+          const SizedBox(height: 16),
+          RaceDetailsLocationCard(
+            onTap: () {},
+            locationIconPath: 'asset/icons/gps.svg',
+            actionIconPath: 'asset/icons/copy.svg',
+            text1: 'Latitude: 26.556900 / N 26° 33' '24.84',
+            text2: 'Longitude: 31.695900 / E 31° 41' '45.24',
           ),
-          const SizedBox(height: 8),
-          Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: AppColors.white,
-              borderRadius: BorderRadius.circular(kBorderRadius),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  DigitsRaceDetails(
-                    iconPath: 'asset/icons/people.svg',
-                    textData: '${model.numOfParticipants}',
-                    textTitle: 'Participants',
-                  ),
-                  DigitsRaceDetails(
-                    iconPath: 'asset/icons/clock.svg',
-                    textData: getDateAndTime(),
-                    textTitle: 'Start time',
-                  ),
-                  const DigitsRaceDetails(
-                    iconPath: 'asset/icons/map.svg',
-                    textData: '150 KM',
-                    textTitle: 'Distance',
-                  ),
-                ],
-              ),
-            ),
-          ),
+          const SizedBox(height: 35),
+          const Btns(),
+          const SizedBox(height: 16),
         ],
       ),
     );
