@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pigeon/features/constant.dart';
+import 'package:pigeon/features/races_details/presentation/view/widgets/bottom_sheet_body.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/widgets/custom_btn_app.dart';
@@ -27,9 +29,12 @@ class _BtnsState extends State<Btns> {
             child: CustomBtnApp(
               onPressed: () {
                 showModalBottomSheet(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(kBorderRadius),
+                    ),
                     context: context,
                     builder: (context) {
-                      return Container();
+                      return const BottomSheetBody();
                     });
               },
               backgroundColor: AppColors.darkGray,

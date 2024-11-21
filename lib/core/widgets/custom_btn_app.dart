@@ -7,7 +7,7 @@ class CustomBtnApp extends StatelessWidget {
       required this.backgroundColor,
       required this.text});
 
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final Color backgroundColor;
   final String text;
 
